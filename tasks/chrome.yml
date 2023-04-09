@@ -1,0 +1,22 @@
+- name: add Apt signing key
+  apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    state: present
+  tags:
+    - brave
+    - install
+- name: add repository into sources list
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: google-chrome
+  tags:
+    - brave
+    - install
+- name: install google-chrome-stable
+  apt:
+    name: "google-chrome-stable"
+    state: latest
+  tags:
+    - brave
+    - install
