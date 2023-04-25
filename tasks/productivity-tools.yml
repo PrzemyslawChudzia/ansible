@@ -6,4 +6,11 @@
   apt: name={{item}}
   with_items:
     - alacritty
+    - fzf
+    - tmux
+    - i3lock
+    # install it via .deb package
+    #- nvim
+    #- flameshot
+    - xautolock
     - tldr
