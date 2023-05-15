@@ -14,6 +14,7 @@
   apt: name={{item}}
   with_items:
     - fonts-powerline
+    - jq
     - fonts-font-awesome
     - curl
     - htop
